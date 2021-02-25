@@ -2,12 +2,12 @@
 setlocal EnableDelayedExpansion
 IF NOT EXIST sysinternals md sysinternals
 
-set sys_tools[0] = "accesschk.exe"
-set sys_tools[1] = "AccessEnum.exe"
-set sys_tools[2] = "ADExplorer.exe"
-set sys_tools[3] = "ADInsight.exe"
-set sys_tools[4] = "adrestore.exe"
-set sys_tools[5] = "Autologon.exe"
+set sys_tools[0]=accesschk.exe
+set sys_tools[1]=AccessEnum.exe
+set sys_tools[2]=ADExplorer.exe
+set sys_tools[3]=ADInsight.exe
+set sys_tools[4]=adrestore.exe
+set sys_tools[5]=Autologon.exe
 
 set "x=0"
 
