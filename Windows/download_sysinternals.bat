@@ -13,9 +13,9 @@ set "x=0"
 
 :SymLoop
 if defined sys_tools[%x%] (
-  SET output_path=%~dp0sysinternals\!systools[%x%]!
+  SET output_path=%~dp0sysinternals\!sys_tools[%x%]!
   IF NOT EXIST "%output_path%" (
-    SET sys_url="http://live.sysinternals.com/!systools[%x%]!"
+    SET sys_url="http://live.sysinternals.com/!sys_tools[%x%]!"
     bitsadmin /transfer "%output_path%" /download /priority normal %sys_url% %output_path%
   ) ELSE (
     echo "%output_path% exists"
