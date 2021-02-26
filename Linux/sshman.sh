@@ -14,6 +14,8 @@ grep -q '\([^"]\|\) *PermitRootLogin *\(without-password\|prohibit-password\|yes
 echo "-prohibit root login"
 grep -q '\([^"]\|\) *PermitEmptyPasswords' $sshd_config_out_loc && sed -i 's/\([^"]\|\) *PermitEmptyPasswords.*/PermitEmptyPasswords no/g' $sshd_config_out_loc || echo 'PermitEmptyPasswords no' >> $sshd_config_out_loc
 echo "-prohibit empty passwords"
+grep -q '\([^"]\|\) *AllowTcpForwarding' $sshd_config_out_loc && sed -i 's/\([^"]\|\) *AllowTcpForwarding.*/AllowTcpForwarding no/g' $sshd_config_out_loc || echo 'AllowTcpForwarding no' >> $sshd_config_out_loc
+echo "-prohibit tcp forwarding"
 grep -q '\([^"]\|\) *PubkeyAuthentication' $sshd_config_out_loc && sed -i 's/\([^"]\|\) *PubkeyAuthentication.*/PubkeyAuthentication yes/g' $sshd_config_out_loc || echo 'PubkeyAuthentication yes' >> $sshd_config_out_loc
 echo "-turn on public key authentication"
 grep -q '\([^"]\|\) *X11Forwarding' $sshd_config_out_loc && sed -i 's/\([^"]\|\) *X11Forwarding.*/X11Forwarding no/g' $sshd_config_out_loc || echo 'X11Forwarding no' >> $sshd_config_out_loc
