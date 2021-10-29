@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sshd_config_backup_loc=./backup_sshd_config
 sshd_config_out_loc=./sshd_config
